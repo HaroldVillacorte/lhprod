@@ -1,6 +1,6 @@
 <h4>Our services</h4>
 <ul class="nav-bar vertical">
-    <li><a class="ajax-link" href="<?php echo $this->url('php'); ?>"><?php echo $this->translate('PHP'); ?></a></li>
-    <li><a class="ajax-link" href="<?php echo $this->url('javascript'); ?>"><?php echo $this->translate('Javascript'); ?></a></li>
-    <li><a class="ajax-link" href="<?php echo $this->url('deployment'); ?>"><?php echo $this->translate('Deployment'); ?></a></li>
+    <li><a class="<?php echo $this->ajaxLink(); ?>" href="<?php echo $this->url('php'); ?>"><?php echo $this->translate('PHP'); ?></a></li>
+    <li><a class="<?php echo $this->ajaxLink(); ?>" href="<?php echo $this->url('javascript'); ?>"><?php echo $this->translate('Javascript'); ?></a></li>
+    <li><a class="<?php echo $this->ajaxLink(); ?>" href="<?php echo $this->url('deployment'); ?>"><?php echo $this->translate('Deployment'); ?></a></li>
 </ul>

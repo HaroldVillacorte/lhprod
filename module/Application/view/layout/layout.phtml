@@ -8,10 +8,10 @@
 
     <section class="row" id="highlighted">
         <div class="panel">
-            <h1><?php echo sprintf($this->translate('Modern Web Solutions'), '<span class="zf-green">', '</span>') ?></h1>
+            <h1><?php echo sprintf($this->translate('Modern Web Solutions')) ?></h1>
             <p><?php echo sprintf($this->translate('Web and mobile application development and deployment using PHP and Javascript.')); ?></p>
             <p>
-                <a class="button secondary ajax-link" href="<?php echo $this->url('team-contact') ; ?>">
+                <a class="button secondary <?php echo $this->ajaxLink(); ?>" href="<?php echo $this->url('team-contact') ; ?>">
                     <?php echo $this->translate('Contact a team member') ?> &raquo;
                 </a>
             </p>

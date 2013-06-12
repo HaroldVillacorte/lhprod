@@ -37,4 +37,17 @@ class Module
             ),
         );
     }
+
+    public function getViewHelperConfig()
+    {
+        return array(
+            'factories' => array(
+                // the array key here is the name you will call the view helper by in your view scripts
+                'ajaxLink' => function($sm) {
+                    $locator = $sm->getServiceLocator(); // $sm is the view helper manager, so we need to fetch the main service manager
+                    return new View\Helper\AjaxLink($locator->get('Request'));
+                },
+            ),
+        );
+    }
 }

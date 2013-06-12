@@ -12,8 +12,6 @@ switch ($environment)
         break;
 }
 
-
-
 // For ZendDeveloperTools
 define('REQUEST_MICROTIME', microtime(true));
 

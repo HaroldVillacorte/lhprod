@@ -52,7 +52,7 @@
     <ul class="right">
       <li class="divider hide-for-small hide-for-medium"></li>
       <li>
-          <a href="<?php echo $this->url('zfcuser'); ?>" class="ajax-link">
+          <a href="<?php echo $this->url('zfcuser'); ?>" class="<?php echo $this->ajaxLink(); ?>">
               <?php echo ($this->zfcUserIdentity()) ? $this->translate('Your Account') : $this->translate('Login'); ?>
           </a>
       </li>
