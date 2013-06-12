@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<?php include 'partials/head.phtml'; ?>
+
+<body>
+
+    <?php include 'partials/topnav.phtml'; ?>
+
+    <section class="row" id="highlighted">
+        <div class="panel">
+            <h1><?php echo sprintf($this->translate('Modern Web Solutions'), '<span class="zf-green">', '</span>') ?></h1>
+            <p><?php echo sprintf($this->translate('Web and mobile application development and deployment using PHP and Javascript.')); ?></p>
+            <p>
+                <a class="button secondary ajax-link" href="<?php echo $this->url('team-contact') ; ?>">
+                    <?php echo $this->translate('Contact a team member') ?> &raquo;
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <section id="main-content" class="row">
+
+        <nav class="columns two show-for-small">
+            <?php include 'partials/sidenav.phtml'; ?>
+        </nav>
+
+        <article id="ajax-content" class="columns ten">
+
+            <section id="messages">
+                <?php include 'partials/messages.phtml'; ?>
+            </section>
+
+            <?php echo $this->content; ?>
+
+        </article>
+
+        <nav class="columns two hide-for-small">
+            <?php include 'partials/sidenav.phtml'; ?>
+        </nav>
+
+    </section>
+
+    <div class="row">
+
+        <?php include 'partials/footer.phtml'; ?>
+
+    </div>
+
+    <?php include 'partials/scripts.phtml'; ?>
+
+</body>
+</html>

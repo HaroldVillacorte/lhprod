@@ -1,0 +1,61 @@
+<nav class="top-bar">
+  <ul>
+    <!-- Title Area -->
+    <li class="name">
+      <h1 id="logo">
+        <a href="<?php echo $this->url('home'); ?>" title="Laughing Host - designs that work.">
+          <?php echo $this->translate('Laughing Host'); ?>
+        </a>
+      </h1>
+    </li>
+    <li class="toggle-topbar"><a href="#"></a></li>
+  </ul>
+
+  <section>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+        <li class="divider"></li>
+        <li><a href="<?php echo $this->url('home'); ?>"><?php echo $this->translate('Home'); ?></a></li>
+
+        <?php if ($this->zfcUserIdentity()): ?>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+              <a class="active" href="#">Admin</a>
+              <ul class="dropdown">
+                <li><label>Modules</label></li>
+
+                <li class="has-dropdown">
+                  <a href="#" class="">Album</a>
+                  <ul class="dropdown">
+                    <li><a href="<?php echo $this->url('album'); ?>"><?php echo $this->translate('Album'); ?></a></li>
+                    <li><a href="<?php echo $this->url('album', array('action' => 'add')); ?>"><?php echo $this->translate('Add Album'); ?></a></li>
+                  </ul>
+                </li>
+
+                <li class="has-dropdown">
+                  <a href="#" class="">Variable</a>
+                  <ul class="dropdown">
+                    <li><a href="<?php echo $this->url('variable'); ?>"><?php echo $this->translate('Variable'); ?></a></li>
+                    <li><a href="<?php echo $this->url('variable', array('action' => 'add')); ?>"><?php echo $this->translate('Add Variable'); ?></a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+        <?php endif; ?>
+
+        <li class="divider"></li>
+    </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small hide-for-medium"></li>
+      <li>
+          <a href="<?php echo $this->url('zfcuser'); ?>" class="ajax-link">
+              <?php echo ($this->zfcUserIdentity()) ? $this->translate('Your Account') : $this->translate('Login'); ?>
+          </a>
+      </li>
+    </ul>
+  </section>
+</nav>
