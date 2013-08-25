@@ -26,7 +26,7 @@ return array(
             'php' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/php',
+                    'route'    => '/php-services',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'php',
@@ -36,7 +36,7 @@ return array(
             'javascript' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/javascript',
+                    'route'    => '/javascript-services',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'javascript',
@@ -46,7 +46,7 @@ return array(
             'deployment' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/deployment',
+                    'route'    => '/deployment-services',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'deployment',
